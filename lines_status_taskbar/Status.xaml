@@ -1,0 +1,22 @@
+﻿<Window
+    xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    Title = "MainWindow"
+    Height = "{Binding Path=Height, Mode=TwoWay}"
+    Width = "{Binding Path=Width, Mode=TwoWay}"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    Background = "#2e2e2e"
+    Opacity = "0.9"
+    WindowStartupLocation="Manual"
+    ShowInTaskbar="False"
+    Visibility="Hidden">
+    
+    <StackPanel
+        Margin="10,10,10,10">
+        <Label
+            FontSize="24.0"
+            Foreground="White">
+            Train status
+        </Label>
+    </StackPanel>
+</Window>

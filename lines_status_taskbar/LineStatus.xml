@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfLineStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.lul.co.uk/">
+  <LineStatus ID="0" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="1" Name="Bakerloo" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="1" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="2" Name="Central" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="10" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="7" Name="Circle" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="2" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="9" Name="District" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="8" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="8" Name="Hammersmith and City" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="4" StatusDetails="Severe delays due to mechanical issues we have identified on a number of our trains.&#xA;Tickets valid on local buses, DLR, Southeastern, Thameslink, C2C and London Overground.">
+    <BranchDisruptions />
+    <Line ID="4" Name="Jubilee" />
+    <Status ID="SD" CssClass="DisruptedService" Description="Severe Delays" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="9" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="11" Name="Metropolitan" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="5" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="5" Name="Northern" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="6" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="6" Name="Piccadilly" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="7" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="3" Name="Victoria" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="11" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="12" Name="Waterloo and City" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="82" StatusDetails="No service between Highbury &amp; Islington and Dalston Junction and Surrey Quays to New Cross and Severe delays between Dalston Junction and Crystal Palace / West Croydon due to a signal failure at Highbury &amp; Islington&#xA;Your tickets will be accepted on the buses.">
+    <BranchDisruptions>
+      <BranchDisruption>
+        <StationTo ID="154" Name="New Cross" />
+        <StationFrom ID="227" Name="Surrey Quays" />
+        <Status ID="PS" CssClass="DisruptedService" Description="Part Suspended" IsActive="true">
+          <StatusType ID="1" Description="Line" />
+        </Status>
+      </BranchDisruption>
+      <BranchDisruption>
+        <StationTo ID="309" Name="Dalston Junction" />
+        <StationFrom ID="108" Name="Highbury &amp; Islington" />
+        <Status ID="PS" CssClass="DisruptedService" Description="Part Suspended" IsActive="true">
+          <StatusType ID="1" Description="Line" />
+        </Status>
+      </BranchDisruption>
+      <BranchDisruption>
+        <StationTo ID="305" Name="Crystal Palace" />
+        <StationFrom ID="309" Name="Dalston Junction" />
+        <Status ID="SD" CssClass="DisruptedService" Description="Severe Delays" IsActive="true">
+          <StatusType ID="1" Description="Line" />
+        </Status>
+      </BranchDisruption>
+      <BranchDisruption>
+        <StationTo ID="366" Name="West Croydon" />
+        <StationFrom ID="309" Name="Dalston Junction" />
+        <Status ID="SD" CssClass="DisruptedService" Description="Severe Delays" IsActive="true">
+          <StatusType ID="1" Description="Line" />
+        </Status>
+      </BranchDisruption>
+    </BranchDisruptions>
+    <Line ID="82" Name="Overground" />
+    <Status ID="PS" CssClass="DisruptedService" Description="Part Suspended" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="83" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="83" Name="TfL Rail" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="81" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="81" Name="DLR" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+  <LineStatus ID="90" StatusDetails="">
+    <BranchDisruptions />
+    <Line ID="90" Name="Trams" />
+    <Status ID="GS" CssClass="GoodService" Description="Good Service" IsActive="true">
+      <StatusType ID="1" Description="Line" />
+    </Status>
+  </LineStatus>
+</ArrayOfLineStatus>

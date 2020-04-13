@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "lines_status_taskbar", "lines_status_taskbar\lines_status_taskbar.fsproj", "{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {713C519F-EAA9-4A07-BCEA-539C9390F3D2}
+	EndGlobalSection
+EndGlobal
