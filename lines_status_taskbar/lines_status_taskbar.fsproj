@@ -60,6 +60,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Content Include="LineStatus.xml" />
+    <None Include="journey.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">

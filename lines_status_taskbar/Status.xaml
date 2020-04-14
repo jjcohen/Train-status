@@ -18,5 +18,11 @@
             Foreground="White">
             Train status
         </Label>
+
+        <Label
+            FontSize="18.0"
+            Foreground="White"
+            Content = "{Binding Path=PrintJourneyTime, Mode=OneWay}">
+        </Label>
     </StackPanel>
 </Window>
