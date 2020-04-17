@@ -10,19 +10,20 @@
     WindowStartupLocation="Manual"
     ShowInTaskbar="False"
     Visibility="Hidden">
-    
+
     <StackPanel
         Margin="10,10,10,10">
-        <Label
+        <TextBlock
             FontSize="24.0"
             Foreground="White">
             Train status
-        </Label>
+        </TextBlock>
 
-        <Label
+        <TextBlock 
             FontSize="18.0"
-            Foreground="White"
-            Content = "{Binding Path=PrintJourneyTime, Mode=OneWay}">
-        </Label>
+            Foreground="White">
+            <Run Text="{Binding JourneyTime}" />
+            <Run Text="mins to home" />
+        </TextBlock>
     </StackPanel>
 </Window>

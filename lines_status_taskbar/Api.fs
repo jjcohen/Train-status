@@ -7,9 +7,6 @@ type LineStatus = XmlProvider<"LineStatus.xml">
 type ArrivalTimes = JsonProvider<"arrivals.json">
 type Journeys = JsonProvider<"journey.json">
 
-let millisecondsUntilNextMinute () =
-    ((60 - System.DateTime.Now.Second) * 1000) + System.DateTime.Now.Millisecond
-
 type Stations = 
     | Liverpool_street
     | Forest_gate
