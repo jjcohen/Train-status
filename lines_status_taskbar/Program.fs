@@ -7,6 +7,8 @@ open System
 open System.Windows.Input
 open System.Windows.Threading
 open System.Diagnostics
+open LDBWS
+open System.ServiceModel
 
 type MainWindowViewModel(w,h) =
     inherit ViewModule.ViewModelBase()
@@ -14,11 +16,17 @@ type MainWindowViewModel(w,h) =
     let mutable width = w
     let mutable height = h
     let mutable journeyTime = 0
+    let mutable nextTrains = String.Empty
     member __.Width with get() = width
     member __.Width with set (s:int) = ()
     member __.Height with get() = height
     member __.Height with set (s:int) = ()
     member __.JourneyTime with get() = journeyTime
+    member __.NextTrains with get() = nextTrains
+    member this.NextTrains    
+        with set (s) =
+            nextTrains <- s
+            this.RaisePropertyChanged("NextTrains")
     member this.JourneyTime
         with set (s) =
             journeyTime <- s
@@ -83,9 +91,28 @@ let main(_) =
     window.DataContext <- mainWindowViewModel :> obj
 
     let update () = async{
-       let! fastest = Api.getFastestJourneyTime "SW1A1AA" "SW1A0AA"
-       System.Diagnostics.Debug.WriteLine(sprintf "%A" fastest)
-       match fastest with Some s -> mainWindowViewModel.JourneyTime <- s | None -> ()
+        let! fastest = Api.getFastestJourneyTime "SW1A1AA" "SW1A0AA"
+        System.Diagnostics.Debug.WriteLine(sprintf "%A" fastest)
+        match fastest with Some s -> mainWindowViewModel.JourneyTime <- s | None -> ()
+
+        let binding = new BasicHttpsBinding()
+        let endpointAddress = new EndpointAddress("https://lite.realtime.nationalrail.co.uk/OpenLDBWS/ldb11.asmx")
+
+        let soapConnection = new Connection(binding, endpointAddress, "api-key")
+       
+        let! minutes =
+            soapConnection.GetMinutesUntilTrainsArrive(
+                Api.Station.Liverpool_street.ToNationalRailCode,
+                Api.Station.Forest_gate.ToNationalRailCode)
+            |> Async.AwaitTask
+
+        mainWindowViewModel.NextTrains <-
+            minutes
+            |> Seq.sort
+            |> Seq.filter (fun t -> t <> 0)
+            |> Seq.truncate 3
+            |> Seq.map (sprintf "%i mins")
+            |> (fun s -> String.Join(System.Environment.NewLine, s))
     }
 
     update () |> Async.StartImmediate

@@ -7,7 +7,7 @@ type LineStatus = XmlProvider<"LineStatus.xml">
 type ArrivalTimes = JsonProvider<"arrivals.json">
 type Journeys = JsonProvider<"journey.json">
 
-type Stations = 
+type Station = 
     | Liverpool_street
     | Forest_gate
     | Wantead_park
@@ -17,8 +17,14 @@ type Stations =
         match this with
         | Liverpool_street -> "910GLIVST"
         | Forest_gate      -> "910GFRSTGT"
-        | Wantead_park     -> "910GGOSPLOK"
-        | Gospel_Oak       -> "910GWNSTDPK"
+        | Wantead_park     -> "910GWNSTDPK"
+        | Gospel_Oak       -> "910GGOSPLOK"
+    member this.ToNationalRailCode =
+        match this with
+        | Liverpool_street -> "LST"
+        | Forest_gate      -> "FOG"
+        | Wantead_park     -> "WNP"
+        | Gospel_Oak       -> "GPO"
     override this.ToString() =
         match this with
         | Liverpool_street -> "Liverpool street"

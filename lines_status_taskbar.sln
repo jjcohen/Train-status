@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "lines_status_taskbar", "lines_status_taskbar\lines_status_taskbar.fsproj", "{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapConnector", "SoapConnector\SoapConnector.csproj", "{580B0FCD-B268-431B-99E9-4E9C3A740C95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C3E20D9-C406-44C3-906C-21DE73D7FFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580B0FCD-B268-431B-99E9-4E9C3A740C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580B0FCD-B268-431B-99E9-4E9C3A740C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580B0FCD-B268-431B-99E9-4E9C3A740C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580B0FCD-B268-431B-99E9-4E9C3A740C95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

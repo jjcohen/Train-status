@@ -13,17 +13,31 @@
 
     <StackPanel
         Margin="10,10,10,10">
-        <TextBlock
-            FontSize="24.0"
-            Foreground="White">
-            Train status
-        </TextBlock>
-
         <TextBlock 
             FontSize="18.0"
             Foreground="White">
             <Run Text="{Binding JourneyTime}" />
             <Run Text="mins to home" />
+        </TextBlock>
+
+        <Separator Name="MySeparator" 
+               Height="4"
+               Width="Auto"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Bottom"                   
+               Background="White"
+               Opacity = "0.4" />
+
+        <TextBlock 
+            FontSize="18.0"
+            Foreground="White">
+            <Run Text="Next trains:" />
+        </TextBlock>
+
+        <TextBlock 
+            FontSize="18.0"
+            Foreground="White">
+            <Run Text="{Binding NextTrains}" />
         </TextBlock>
     </StackPanel>
 </Window>

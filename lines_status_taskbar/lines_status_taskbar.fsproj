@@ -62,6 +62,7 @@
     </Resource>
     <Content Include="LineStatus.xml" />
     <None Include="journey.json" />
+    <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
@@ -69,6 +70,9 @@
     </Reference>
     <Reference Include="FSharp.Data">
       <HintPath>..\packages\FSharp.Data.3.3.3\lib\net45\FSharp.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Data.TypeProviders">
+      <HintPath>..\packages\FSharp.Data.TypeProviders.5.0.0.6\lib\net40\FSharp.Data.TypeProviders.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.ViewModule">
       <HintPath>..\packages\FSharp.ViewModule.Core.1.0.7.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\FSharp.ViewModule.dll</HintPath>
@@ -97,6 +101,7 @@
     <Reference Include="System.Runtime">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security.Cryptography.Algorithms">
       <Private>True</Private>
     </Reference>
@@ -109,6 +114,7 @@
     <Reference Include="System.Security.Cryptography.X509Certificates">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.ValueTuple">
       <Private>True</Private>
     </Reference>
@@ -120,6 +126,13 @@
       <HintPath>..\packages\TaskBuilder.fs.2.2.0-alpha\lib\net47\TaskBuilder.fs.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoapConnector\SoapConnector.csproj">
+      <Name>SoapConnector</Name>
+      <Project>{580b0fcd-b268-431b-99e9-4e9c3a740c95}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

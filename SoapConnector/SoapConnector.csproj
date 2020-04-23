@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{580B0FCD-B268-431B-99E9-4E9C3A740C95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoapConnector</RootNamespace>
+    <AssemblyName>SoapConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LDBWS.cs" />
+    <Compile Include="Connected Services\LiveDepartureBoardWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\LiveDepartureBoardWebService\darwin_token_types_2013-11-28.wsdl" />
+    <None Include="Connected Services\LiveDepartureBoardWebService\darwin_token_types_2013-11-28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2007-10-10_ldb_common_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2012-01-13_ldb_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2015-11-27_ldb_common_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2015-11-27_ldb_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2016-02-16_ldb_common_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2016-02-16_ldb_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2017-02-02_ldb_common_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\rtti_2017-10-01_ldb.wsdl" />
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2017-10-01_ldb_common_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\RTTI_2017-10-01_ldb_types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.DeparturesBoard1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.DeparturesBoardWithDetails1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetArrBoardWithDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetArrDepBoardWithDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetArrivalBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetArrivalDepartureBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetDepartureBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetDepBoardWithDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetFastestDeparturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetFastestDeparturesWithDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetNextDeparturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetNextDeparturesWithDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.GetServiceDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.ServiceDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.StationBoard1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\SoapConnector.LiveDepartureBoardWebService.StationBoardWithDetails1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LiveDepartureBoardWebService\wsdl.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\LiveDepartureBoardWebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LiveDepartureBoardWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LiveDepartureBoardWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LiveDepartureBoardWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
